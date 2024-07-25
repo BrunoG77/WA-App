@@ -1,0 +1,107 @@
+{% extends "wa/layout.html" %}
+{% load static %}
+
+{% block body %}
+<!-- Ttile and create mesocycle button -->
+<div class="new-meso">
+    <form class="create-meso" action="{% url 'new_meso' %}" method="post">
+        {% csrf_token %}
+        <input class="meso-title" autofocus type="text" name="title" 
+        autocomplete='off' placeholder="Name your mesocycle">
+        
+        <button class="button-create-meso" role="button">CREATE MESOCYCLE</button>
+</div>
+
+<!-- Define exercises for each day -->
+<div class="wrap">
+    <div class="meso-days" id="first-one">
+        <div class="select">
+            <span class="selected">Choose a day</span>
+            <div class="caret"></div>
+        </div>
+        <div class="delete-meso">
+            <a>
+                <i class='bx bx-trash'></i>
+            </a>
+        </div>
+        <ul class="dropdown-menu">
+            <li style="display:none" class="active"></li>
+            <li>Monday</li>
+            <li>Tuesday</li>
+            <li>Wednesday</li>
+            <li>Thursday</li>
+            <li>Friday</li>
+            <li>Saturday</li>
+            <li>Sunday</li>
+        </ul>
+        <div class="add-muscle">
+            <button data-modal-target="#modal" class="button-muscle" type="button">
+                <i class='bx bx-list-plus'></i> NEW MUSCLE GROUP
+            </button>
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Choose a muscle group</div>
+                <button data-close-modal class="close-modal" type="button">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="muscle-options">
+                    <div class="choose-muscle-row">
+                        <button class="choose-muscle-btn" data-muscle="Chest" type="button">
+                            <i class='bx bx-circle'></i>Chest</button>
+                    </div>
+                    <div class="choose-muscle-row">
+                        <button class="choose-muscle-btn" data-muscle="Biceps" type="button">
+                            <i class='bx bx-circle'></i>Biceps
+                        </button>
+                    </div>
+                    <div class="choose-muscle-row">
+                        <button class="choose-muscle-btn" data-muscle="Triceps" type="button">
+                            <i class='bx bx-circle'></i>Triceps
+                        </button>
+                    </div>
+                    <div class="choose-muscle-row">
+                        <button class="choose-muscle-btn" data-muscle="Legs" type="button">
+                            <i class='bx bx-circle'></i>Legs
+                        </button>
+                    </div>
+                    <div class="choose-muscle-row">
+                        <button class="choose-muscle-btn" data-muscle="Back" type="button">
+                            <i class='bx bx-circle'></i>Back
+                        </button>
+                    </div>
+                    <div class="choose-muscle-row">
+                        <button class="choose-muscle-btn" data-muscle="Shoulders" type="button">
+                            <i class='bx bx-circle'></i>Shoulders
+                        </button>
+                    </div>
+                    <div class="choose-muscle-row">
+                        <button class="choose-muscle-btn" data-muscle="Abs" type="button">
+                            <i class='bx bx-circle'></i>Abs
+                        </button>
+                    </div>
+                    <div class="choose-muscle-row" id="btn-muscle-circle-last">
+                        <button class="choose-muscle-btn" data-muscle="Forearms" type="button">
+                            <i class='bx bx-circle'></i>Forearms
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--New day-->
+    <div class="new-day">
+        <button class="button-muscle" id="add-day" type="button"><i class='bx bx-plus' ></i></i>NEW DAY</button>
+    </div>
+
+</div>
+<div id="overlay"></div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'wa/wa.js' %}"></script>
+{% endblock %}

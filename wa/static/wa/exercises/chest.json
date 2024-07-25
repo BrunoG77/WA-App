@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Barbell Bench Press",
+        "targets": ["pectoralis major", "deltoids", "triceps"],
+        "how_to": "Lie flat on a bench, grip the barbell slightly wider than shoulder-width, lower the bar to your chest, and press it back up."
+    },
+    {
+        "name": "Dumbbell Bench Press",
+        "targets": ["pectoralis major", "deltoids", "triceps"],
+        "how_to": "Lie flat on a bench, hold a dumbbell in each hand, lower the dumbbells to your chest, and press them back up."
+    },
+    {
+        "name": "Incline Barbell Press",
+        "targets": ["upper pectoralis major", "deltoids", "triceps"],
+        "how_to": "Set the bench at an incline (about 30-45 degrees), grip the barbell slightly wider than shoulder-width, lower the bar to your upper chest, and press it back up."
+    },
+    {
+        "name": "Incline Dumbbell Press",
+        "targets": ["upper pectoralis major", "deltoids", "triceps"],
+        "how_to": "Set the bench at an incline (about 30-45 degrees), hold a dumbbell in each hand, lower the dumbbells to your upper chest, and press them back up."
+    },
+    {
+        "name": "Decline Barbell Press",
+        "targets": ["lower pectoralis major", "deltoids", "triceps"],
+        "how_to": "Set the bench at a decline, grip the barbell slightly wider than shoulder-width, lower the bar to your lower chest, and press it back up."
+    },
+    {
+        "name": "Decline Dumbbell Press",
+        "targets": ["lower pectoralis major", "deltoids", "triceps"],
+        "how_to": "Set the bench at a decline, hold a dumbbell in each hand, lower the dumbbells to your lower chest, and press them back up."
+    },
+    {
+        "name": "Cable Flyes",
+        "targets": ["pectoralis major"],
+        "how_to": "Set the pulleys at chest height, grab the handles, and bring them together in front of your chest with a slight bend in your elbows."
+    },
+    {
+        "name": "Pec Deck Machine",
+        "targets": ["pectoralis major"],
+        "how_to": "Sit on the machine, place your arms on the pads, and bring them together in front of your chest."
+    },
+    {
+        "name": "Dumbbell Flyes",
+        "targets": ["pectoralis major"],
+        "how_to": "Lie flat on a bench, hold a dumbbell in each hand, and with a slight bend in your elbows, lower the weights to the side and bring them back together above your chest."
+    },
+    {
+        "name": "Incline Dumbbell Flyes",
+        "targets": ["upper pectoralis major"],
+        "how_to": "Set the bench at an incline (about 30-45 degrees), hold a dumbbell in each hand, and with a slight bend in your elbows, lower the weights to the side and bring them back together above your chest."
+    },
+    {
+        "name": "Push-Ups",
+        "targets": ["pectoralis major", "deltoids", "triceps", "core"],
+        "how_to": "Place hands slightly wider than shoulder-width on the floor, lower your body until your chest nearly touches the ground, and push back up."
+    },
+    {
+        "name": "Weighted Dips",
+        "targets": ["lower pectoralis major", "deltoids", "triceps"],
+        "how_to": "Use parallel bars, lean slightly forward, dip down until your shoulders are below your elbows, and push back up."
+    },
+    {
+        "name": "Smith Machine Bench Press",
+        "targets": ["pectoralis major", "deltoids", "triceps"],
+        "how_to": "Perform a bench press using a Smith machine, which can help control the movement and focus on muscle contraction."
+    },
+    {
+        "name": "Landmine Press",
+        "targets": ["upper pectoralis major", "deltoids", "triceps"],
+        "how_to": "Anchor one end of a barbell in a landmine attachment, hold the other end with one hand, and press upward."
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+      "name": "Squat",
+      "targets": ["quadriceps", "glutes", "hamstrings", "core"],
+      "how_to": "Stand with feet shoulder-width apart, hold a barbell across your upper back, bend your knees and hips to lower your body until your thighs are parallel to the ground, and push back up."
+    },
+    {
+      "name": "Leg Press",
+      "targets": ["quadriceps", "glutes", "hamstrings"],
+      "how_to": "Sit on a leg press machine with your feet on the platform, lower the platform by bending your knees, and press it back up."
+    },
+    {
+      "name": "Lunge",
+      "targets": ["quadriceps", "glutes", "hamstrings"],
+      "how_to": "Stand with feet together, step forward with one leg, lower your hips until both knees are bent at a 90-degree angle, and push back to the starting position."
+    },
+    {
+      "name": "Deadlift",
+      "targets": ["hamstrings", "glutes", "lower back"],
+      "how_to": "Stand with feet hip-width apart, grip the barbell just outside your legs, lift the bar by extending your hips and knees, keeping your back straight."
+    },
+    {
+      "name": "Leg Curl",
+      "targets": ["hamstrings"],
+      "how_to": "Lie face down on a leg curl machine, place your ankles under the pads, curl your legs up towards your buttocks, and slowly lower them back down."
+    },
+    {
+      "name": "Leg Extension",
+      "targets": ["quadriceps"],
+      "how_to": "Sit on a leg extension machine, place your feet under the pads, extend your legs until they are straight, and slowly lower them back down."
+    },
+    {
+      "name": "Romanian Deadlift",
+      "targets": ["hamstrings", "glutes", "lower back"],
+      "how_to": "Stand with feet hip-width apart, hold a barbell in front of your thighs, bend at the hips while keeping your legs mostly straight, lower the bar to mid-shin level, and return to the starting position."
+    },
+    {
+      "name": "Calf Raise",
+      "targets": ["calves"],
+      "how_to": "Stand on a calf raise machine or a step with your heels hanging off, raise your heels as high as possible, and lower them back down."
+    },
+    {
+      "name": "Bulgarian Split Squat",
+      "targets": ["quadriceps", "glutes", "hamstrings"],
+      "how_to": "Stand a few feet in front of a bench, place one foot on the bench behind you, lower your hips until your front thigh is parallel to the ground, and push back up."
+    },
+    {
+      "name": "Hip Thrust",
+      "targets": ["glutes", "hamstrings"],
+      "how_to": "Sit on the ground with your upper back against a bench, roll a barbell over your hips, thrust your hips upward by squeezing your glutes, and lower them back down."
+    },
+    {
+      "name": "Goblet Squat",
+      "targets": ["quadriceps", "glutes", "hamstrings", "core"],
+      "how_to": "Hold a dumbbell or kettlebell close to your chest, squat down until your thighs are parallel to the ground, and stand back up."
+    },
+    {
+      "name": "Sumo Deadlift",
+      "targets": ["hamstrings", "glutes", "quadriceps", "lower back"],
+      "how_to": "Stand with feet wider than shoulder-width apart and toes pointed out, grip the barbell with hands inside your knees, lift the bar by extending your hips and knees."
+    },
+    {
+      "name": "Step-Up",
+      "targets": ["quadriceps", "glutes", "hamstrings"],
+      "how_to": "Stand in front of a bench or step, place one foot on the bench, push through your heel to lift your body up, and lower back down."
+    },
+    {
+      "name": "Box Jump",
+      "targets": ["quadriceps", "glutes", "hamstrings", "calves"],
+      "how_to": "Stand in front of a sturdy box or platform, jump onto the box, landing with both feet, and step back down."
+    }
+]

@@ -1,0 +1,768 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-img {
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid #eee;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #10171e;
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .main-content {
+left: 250px;
+width: calc(100% - 250px);
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #fff;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 200px;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo {
+    opacity: 1;
+}
+
+.top .logo i {
+    font-size: 2.5rem;
+    margin-right: 5px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user p {
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p {
+    opacity: 0;
+}
+
+.sidebar.active p {
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 50px;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar.active ul li { 
+    width: 210px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fff;
+    color: #10171e;
+}   
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    z-index: 2;
+}
+
+.sidebar .nav-item {
+    display: none;
+}
+
+.sidebar.active .nav-item {
+    display: inline;
+}
+
+.sidebar ul li .tooltip {
+    background-color: #fff;
+    position: absolute;
+    margin-left: 160px;
+    width: 180px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 3;
+    display: none;
+}
+
+.sidebar ul .theme-sidebar {
+    position: absolute;
+    bottom: 100px;
+}
+
+.sidebar ul .logout-sidebar {
+    position: absolute;
+    bottom: 50px;
+}
+
+.sidebar ul li .tooltip#theme,
+.sidebar ul li .tooltip#logout {
+    width: 100px;
+    margin-left: 120px;
+}
+
+.sidebar ul .cur-work-sidebar {
+    position: absolute;
+    top: 150px;
+}
+
+.sidebar ul .meso-sidebar {
+    position: absolute;
+    top: 200px;
+}
+
+.sidebar ul .custom-ex-sidebar {
+    position: absolute;
+    top: 250px;
+}
+
+.sidebar ul .new-meso-sidebar {
+    position: absolute;
+    top: 300px;
+}
+
+.sidebar ul li .tooltip#new-meso,
+.sidebar ul li .tooltip#cur-work {
+    width: 170px;
+    margin-left: 155px;
+}
+
+.sidebar ul li .tooltip#meso {
+    width: 125px;
+    margin-left: 133px;
+}
+
+
+
+.sidebar ul li:hover .tooltip {
+    display: inline-block;
+}
+
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.main-content {
+    position: relative;
+    background-color: #252629;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+    overflow-x: scroll;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* SIDEBAR OVER */
+
+/* LOGIN STUFF */
+
+.login-box {
+    position: absolute;
+    top: 23.5%;
+    left: 50%;
+    width: 50%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #10171e;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.login-box#register {
+    top: 31%;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    font-size: 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .2s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 14px;
+}
+
+.login-box form a {
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-left: 5px;
+    letter-spacing: 4px
+}
+
+.text{
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+/* BUTTON */
+.button {
+  background-color: #03e9f4;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  height: 42px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #65e0ff;
+}
+
+/* END BUTTON */
+
+.button-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #fff;
+}
+
+.message {
+    position: absolute;
+    background-color: #fff;
+    text-align: center;
+    color: #000000;
+    margin-top: 26%;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    padding: 1vh;
+}
+
+.message#register {
+    margin-top: 35%;
+}
+
+/* NEW MESOCYCLE TITLE AND BUTTON */
+.new-meso {
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+.create-meso .meso-title {
+    color: #fff;
+    background-color: inherit;
+    border: none;
+    border-bottom: 0.3vh solid #ffffff;
+    font-size: 2vh;
+    font-weight: 600;
+    width: 85%;
+    float: left;
+    padding: 5px;
+}
+
+.create-meso .meso-title:focus {
+    outline: 0;
+}
+
+.create-meso .button-create-meso {
+    float: right;
+    margin: 0px 10px;
+    padding: 0.5em 1em;
+    color: #fff;
+    background-color: #46515c;
+    border: none;
+    font-weight: 600;
+    font-size: 1.5vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-meso .button-create-meso:hover {
+    background-color: #5f6d7a;
+}
+
+/* NEW MESOCYCLE GROUPS */
+.meso-days {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 2em 1em 2em 2em;
+    min-width: 15em;
+    width: 15%;
+    background-color: #10171e;
+    padding: 0.7vh;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.meso-days * {
+    box-sizing: border-box;
+}
+
+.select {
+    background-color: #10171e;
+    width: 80%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #3f3f3f;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}   
+
+    /* select done clicked in javascript */
+
+.select-clicked {
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 0.8em #ffffff;
+}
+
+.select:hover {
+    background-color: #373737;
+}
+
+    /* caret is a mark (‸, ⁁) placed below the line to indicate a proposed insertion in a text */
+    /* ITS THE ARROW */
+.caret {
+    width: 0;
+    height: 0;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 6px solid #fff;
+    transition: 0.3s;
+}
+
+    /*Rotate styles in js*/
+.caret-rotate {
+    transform: rotate(90deg);
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0em 1em;
+    background-color: #292929;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    color: #878787;
+    position: absolute;
+    top: 3.27em;
+    left: 2.5%;
+    width: 76%;
+    height: 0;
+    transition: 300ms cubic-bezier(0.77, 0, 0.18, 1);
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+    /* custom scrollbar*/
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+    /* track */
+.dropdown-menu::-webkit-scrollbar-track {
+    background-color: #404040;
+}
+
+    /* handle */
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #727272;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background-color: #9e9e9e;
+}
+
+.dropdown-menu li {
+    padding: 0.7em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #242424;
+}
+
+.dropdown-menu .active {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.text-fade-in {
+    animation: textFade 300ms ease-out;
+}
+
+    /* open styles js */
+.dropdown-menu-open {
+    border: 1px #383838 solid;
+    height: 15em;
+}
+
+@keyframes textFade {
+    0% {
+        transform: translateX(-1em);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Remove meso icon */
+.delete-meso a {
+    display: inline-block;
+    color: #fff;
+    margin-left: 1.5vh;
+    margin-top: 1vh;
+    position: relative;
+    transition: color 0.3s;
+    font-size: 20px;
+    text-align: center;
+}
+
+.delete-meso a i {
+    cursor: pointer;
+}
+
+.delete-meso a:hover {
+    color: #a73535;
+}
+
+/* Add Muscle button */
+.add-muscle {
+    width: 100%;
+}
+
+.button-muscle {
+    width: 100%;
+    padding: 1vh;
+    margin-top: 1vh;
+    background-color: #373737;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5vh;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.button-muscle:hover {
+    background-color: #474747;
+}
+
+.button-muscle i {
+    color: #fff;
+    float: left;
+    font-size: 2vh;
+    margin-right: 1vh;
+    text-align: center;
+}
+
+/* New day button */
+.new-day {
+    min-width: 15%;
+    position: relative;
+    margin: 2em 2em 2em 2em;
+}
+
+.wrap {
+    display: flex;
+    
+    white-space: nowrap;
+}
+
+.new-day .button-muscle#add-day {
+    margin-top: 0;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 20;
+    background-color: #373737;
+    width: 25%;
+    max-width: 80%;
+    min-width: 40vh;
+    transition: 200ms ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1)
+}
+
+.modal-header {
+    padding: 1em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 0.5em;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.modal-header .close-modal {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+.choose-muscle-row {
+    width: 100%;
+    border-bottom: #000000 1px solid;
+    margin-bottom: 0.5em;
+}
+
+.choose-muscle-btn {
+    background-color: inherit;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding-bottom: 0.7rem;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    transition: background-color font-size 0.2s ease-in-out;
+}
+
+.choose-muscle-btn i {
+    background-color: inherit;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 0.5em;
+    transition: background-color font-size 0.2s ease-in-out;
+    border-radius: 1rem;
+}
+
+#btn-muscle-circle-last {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.choose-muscle-row:hover .choose-muscle-btn i {
+    background-color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.choose-muscle-btn:hover i {
+    background-color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.choose-muscle-btn i:hover {
+    background-color: #ffffff;  
+    font-size: 1.4rem;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.muscle-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* New box to choose exercises */
+.choose-exercise {
+    padding: 0.5rem;
+    margin-top: 0.7rem;
+    width: 100%;
+    background-color: #373737;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.muscle-chosen {
+    color: #ffffff;
+    padding: 0.3rem 0.7rem;
+    background-color: #802c2c;
+    font-size: 1rem;
+    font-weight: 700;
+    width: max-content;
+    pointer-events: none;
+}
+
+.delete-meso#muscle-chosen a {
+    position: absolute;
+    right: 10%;
+    margin-top: 0.1rem;
+    cursor: pointer;
+}
+
+.choose-ex {
+    width: 100%;
+}
+
+.choose-ex .choose-ex-btn {
+    padding: 0.5rem;
+    color: #fff;
+    background-color: #535353;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    width: 100%;
+    font-size: 0.9rem;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.choose-ex .choose-ex-btn:hover {
+    background-color: #7a7a7a;
+}

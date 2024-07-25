@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Close-Grip Bench Press",
+      "targets": ["triceps brachii", "pectoralis major", "deltoids"],
+      "how_to": "Lie flat on a bench, grip the barbell with hands shoulder-width apart, lower the bar to your chest, and press it back up."
+    },
+    {
+      "name": "Dips",
+      "targets": ["triceps brachii", "pectoralis major", "deltoids"],
+      "how_to": "Use parallel bars, lower your body by bending your elbows until your shoulders are below your elbows, and push back up."
+    },
+    {
+      "name": "Tricep Pushdown",
+      "targets": ["triceps brachii"],
+      "how_to": "Stand facing a cable machine with a rope or straight bar attachment, grip the attachment with an overhand grip, and push it down until your arms are fully extended."
+    },
+    {
+      "name": "Overhead Tricep Extension",
+      "targets": ["triceps brachii"],
+      "how_to": "Hold a dumbbell or a rope attachment on a cable machine overhead with both hands, lower it behind your head by bending your elbows, and extend your arms back up."
+    },
+    {
+      "name": "Skull Crushers",
+      "targets": ["triceps brachii"],
+      "how_to": "Lie flat on a bench, hold an EZ curl bar or dumbbells with an overhand grip, lower the weight to your forehead by bending your elbows, and extend your arms back up."
+    },
+    {
+      "name": "Tricep Kickback",
+      "targets": ["triceps brachii"],
+      "how_to": "Hold a dumbbell in one hand, bend forward at the hips, keep your upper arm parallel to the floor, and extend your arm back until it is straight."
+    },
+    {
+      "name": "Close-Grip Push-Up",
+      "targets": ["triceps brachii", "pectoralis major", "deltoids"],
+      "how_to": "Place your hands close together on the floor, lower your body until your chest nearly touches the ground, and push back up."
+    },
+    {
+      "name": "Cable Overhead Extension",
+      "targets": ["triceps brachii"],
+      "how_to": "Attach a rope to a low pulley, face away from the machine, hold the rope behind your head with both hands, and extend your arms overhead."
+    },
+    {
+      "name": "Single-Arm Dumbbell Overhead Extension",
+      "targets": ["triceps brachii"],
+      "how_to": "Hold a dumbbell in one hand overhead, lower it behind your head by bending your elbow, and extend your arm back up."
+    },
+    {
+      "name": "Bench Dip",
+      "targets": ["triceps brachii"],
+      "how_to": "Sit on a bench with your hands next to your hips, slide your hips off the bench, lower your body by bending your elbows, and push back up."
+    }
+]

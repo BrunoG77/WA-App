@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Wrist Curl",
+      "targets": ["flexor muscles"],
+      "how_to": "Sit on a bench with your forearms resting on your thighs, hold a barbell or dumbbells with an underhand grip, curl your wrists upward, and lower them back down."
+    },
+    {
+      "name": "Reverse Wrist Curl",
+      "targets": ["extensor muscles"],
+      "how_to": "Sit on a bench with your forearms resting on your thighs, hold a barbell or dumbbells with an overhand grip, curl your wrists upward, and lower them back down."
+    },
+    {
+      "name": "Hammer Curl",
+      "targets": ["brachioradialis", "biceps brachii"],
+      "how_to": "Stand with feet shoulder-width apart, hold a dumbbell in each hand with a neutral grip (palms facing each other), curl the dumbbells up to shoulder level, and lower them back down."
+    },
+    {
+      "name": "Reverse Curl",
+      "targets": ["brachioradialis", "extensor muscles"],
+      "how_to": "Stand with feet shoulder-width apart, hold a barbell or EZ curl bar with an overhand grip, curl the bar up to shoulder level, and lower it back down."
+    },
+    {
+      "name": "Zottman Curl",
+      "targets": ["flexor muscles", "extensor muscles", "biceps brachii"],
+      "how_to": "Stand with feet shoulder-width apart, hold a dumbbell in each hand with an underhand grip, curl the dumbbells up, rotate your wrists to an overhand grip, and lower them back down."
+    },
+    {
+      "name": "Farmer's Walk",
+      "targets": ["forearms", "grip strength"],
+      "how_to": "Stand with feet shoulder-width apart, hold a heavy dumbbell or kettlebell in each hand at your sides, walk a certain distance or for a set time, and maintain an upright posture."
+    },
+    {
+      "name": "Towel Pull-Up",
+      "targets": ["forearms", "biceps brachii"],
+      "how_to": "Hang a towel over a pull-up bar, grip the ends of the towel, pull your body up until your chin is above your hands, and lower back down."
+    },
+    {
+      "name": "Plate Pinch",
+      "targets": ["forearms", "grip strength"],
+      "how_to": "Hold two weight plates together with smooth sides facing out, pinch them between your fingers and thumb, hold for a set time, and then release."
+    },
+    {
+      "name": "Wrist Roller",
+      "targets": ["flexor muscles", "extensor muscles"],
+      "how_to": "Hold a wrist roller with both hands, roll the weight up by twisting the roller, and then slowly lower it back down."
+    },
+    {
+      "name": "Behind-the-Back Wrist Curl",
+      "targets": ["flexor muscles"],
+      "how_to": "Stand with feet shoulder-width apart, hold a barbell behind your back with an underhand grip, curl your wrists upward, and lower them back down."
+    }
+]

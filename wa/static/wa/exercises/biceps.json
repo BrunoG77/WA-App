@@ -1,0 +1,42 @@
+[
+    {
+    "name": "Barbell Curl",
+    "targets": ["biceps brachii", "brachialis"],
+    "how_to": "Stand with feet shoulder-width apart, hold a barbell with an underhand grip, curl the barbell up to shoulder level, and lower it back down."
+    },
+    {
+    "name": "Dumbbell Curl",
+    "targets": ["biceps brachii", "brachialis"],
+    "how_to": "Stand with feet shoulder-width apart, hold a dumbbell in each hand with an underhand grip, curl the dumbbells up to shoulder level, and lower them back down."
+    },
+    {
+    "name": "Hammer Curl",
+    "targets": ["brachialis", "biceps brachii", "brachioradialis"],
+    "how_to": "Stand with feet shoulder-width apart, hold a dumbbell in each hand with a neutral grip (palms facing each other), curl the dumbbells up to shoulder level, and lower them back down."
+    },
+    {
+    "name": "Preacher Curl",
+    "targets": ["biceps brachii"],
+    "how_to": "Sit on a preacher bench with your upper arms resting on the pad, hold a barbell or dumbbells with an underhand grip, curl the weight up to shoulder level, and lower it back down."
+    },
+    {
+    "name": "Concentration Curl",
+    "targets": ["biceps brachii"],
+    "how_to": "Sit on a bench, hold a dumbbell in one hand, rest your elbow on the inside of your thigh, curl the dumbbell up to shoulder level, and lower it back down."
+    },
+    {
+    "name": "Cable Curl",
+    "targets": ["biceps brachii"],
+    "how_to": "Stand facing a cable machine, hold a bar attachment with an underhand grip, curl the bar up to shoulder level, and lower it back down."
+    },
+    {
+    "name": "Incline Dumbbell Curl",
+    "targets": ["biceps brachii"],
+    "how_to": "Sit on an incline bench with a dumbbell in each hand, let your arms hang down, curl the dumbbells up to shoulder level, and lower them back down."
+    },
+    {
+    "name": "Spider Curl",
+    "targets": ["biceps brachii"],
+    "how_to": "Lie chest down on an incline bench, hold a barbell or dumbbells with an underhand grip, curl the weight up to shoulder level, and lower it back down."
+    }
+]

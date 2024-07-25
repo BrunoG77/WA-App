@@ -1,0 +1,67 @@
+[
+    {
+      "name": "Overhead Barbell Press",
+      "targets": ["deltoids", "triceps", "upper chest"],
+      "how_to": "Stand with feet shoulder-width apart, hold a barbell at shoulder height with an overhand grip, press the bar overhead until your arms are fully extended, and lower it back down."
+    },
+    {
+      "name": "Dumbbell Shoulder Press",
+      "targets": ["deltoids", "triceps"],
+      "how_to": "Sit on a bench with back support, hold a dumbbell in each hand at shoulder height with palms facing forward, press the dumbbells overhead until your arms are fully extended, and lower them back down."
+    },
+    {
+      "name": "Arnold Press",
+      "targets": ["deltoids", "triceps"],
+      "how_to": "Sit on a bench with back support, hold a dumbbell in each hand with palms facing you, rotate your palms outward as you press the dumbbells overhead, and reverse the motion to lower them back down."
+    },
+    {
+      "name": "Lateral Raise",
+      "targets": ["lateral deltoids"],
+      "how_to": "Stand with feet shoulder-width apart, hold a dumbbell in each hand with arms at your sides, lift the dumbbells out to the sides until they are at shoulder height, and lower them back down."
+    },
+    {
+      "name": "Front Raise",
+      "targets": ["anterior deltoids"],
+      "how_to": "Stand with feet shoulder-width apart, hold a dumbbell in each hand with arms at your sides, lift the dumbbells in front of you until they are at shoulder height, and lower them back down."
+    },
+    {
+      "name": "Rear Delt Fly",
+      "targets": ["posterior deltoids"],
+      "how_to": "Sit on the edge of a bench with dumbbells in each hand, bend forward at the hips, lift the dumbbells out to the sides until they are at shoulder height, and lower them back down."
+    },
+    {
+      "name": "Face Pull",
+      "targets": ["posterior deltoids", "upper back", "traps"],
+      "how_to": "Attach a rope to a cable machine at upper chest height, grip the rope with both hands, pull the rope towards your face with elbows flared out, and return to the starting position."
+    },
+    {
+      "name": "Upright Row",
+      "targets": ["deltoids", "traps"],
+      "how_to": "Stand with feet shoulder-width apart, hold a barbell or dumbbells in front of you with an overhand grip, pull the weight up towards your chin, and lower it back down."
+    },
+    {
+      "name": "Seated Dumbbell Press",
+      "targets": ["deltoids", "triceps"],
+      "how_to": "Sit on a bench with back support, hold a dumbbell in each hand at shoulder height with palms facing forward, press the dumbbells overhead until your arms are fully extended, and lower them back down."
+    },
+    {
+      "name": "Smith Machine Overhead Press",
+      "targets": ["deltoids", "triceps"],
+      "how_to": "Sit or stand in a Smith machine, position the bar at shoulder height, press the bar overhead until your arms are fully extended, and lower it back down."
+    },
+    {
+      "name": "Dumbbell Shrug",
+      "targets": ["trapezius"],
+      "how_to": "Stand with feet shoulder-width apart, hold a dumbbell in each hand at your sides, lift your shoulders as high as possible, and lower them back down."
+    },
+    {
+      "name": "Cable Lateral Raise",
+      "targets": ["lateral deltoids"],
+      "how_to": "Stand next to a cable machine with the handle at the lowest position, hold the handle with the hand furthest from the machine, lift the handle out to the side until it is at shoulder height, and lower it back down."
+    },
+    {
+      "name": "Reverse Pec Deck Fly",
+      "targets": ["posterior deltoids"],
+      "how_to": "Sit on a pec deck machine facing the pads, place your arms on the pads, and bring them together in a reverse fly motion."
+    }
+]

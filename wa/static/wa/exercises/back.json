@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Deadlift",
+        "targets": ["entire back", "glutes", "hamstrings"],
+        "how_to": "Stand with feet hip-width apart, grip the barbell just outside your legs, lift the bar by extending your hips and knees, keeping your back straight."
+    },
+    {
+        "name": "Pull-Up",
+        "targets": ["latissimus dorsi", "rhomboids", "biceps"],
+        "how_to": "Hang from a bar with a shoulder-width grip, pull your body up until your chin is above the bar, then lower back down."
+    },
+    {
+        "name": "Bent-Over Barbell Row",
+        "targets": ["latissimus dorsi", "rhomboids", "trapezius", "biceps"],
+        "how_to": "Bend at the hips and knees, keep your back straight, pull the barbell to your waist, and lower it back down."
+    },
+    {
+        "name": "T-Bar Row",
+        "targets": ["latissimus dorsi", "rhomboids", "trapezius", "biceps"],
+        "how_to": "Use a T-bar row machine or barbell, bend at the hips and knees, pull the handle or bar towards your chest, and lower it back down."
+    },
+    {
+        "name": "Seated Cable Row",
+        "targets": ["latissimus dorsi", "rhomboids", "trapezius", "biceps"],
+        "how_to": "Sit on a rowing machine, grab the handles, pull them towards your torso, and extend your arms back out."
+    },
+    {
+        "name": "Lat Pulldown",
+        "targets": ["latissimus dorsi", "biceps"],
+        "how_to": "Sit at a lat pulldown machine, grip the bar wider than shoulder-width, pull it down to your chest, and slowly let it rise back up."
+    },
+    {
+        "name": "Single-Arm Dumbbell Row",
+        "targets": ["latissimus dorsi", "rhomboids", "trapezius", "biceps"],
+        "how_to": "Place one knee and hand on a bench, with the other foot on the floor, pull a dumbbell towards your hip, and lower it back down."
+    },
+    {
+        "name": "Face Pull",
+        "targets": ["upper back", "rear deltoids", "traps"],
+        "how_to": "Attach a rope to a cable machine at upper chest height, pull the rope towards your face with your elbows flared out, and return to the starting position."
+    },
+    {
+        "name": "Straight-Arm Pulldown",
+        "targets": ["latissimus dorsi"],
+        "how_to": "Stand at a cable machine with a straight bar, keep your arms straight, pull the bar down to your thighs, and slowly let it rise back up."
+    },
+    {
+        "name": "Chest-Supported Row",
+        "targets": ["latissimus dorsi", "rhomboids", "trapezius", "biceps"],
+        "how_to": "Lie face down on an incline bench, row dumbbells or a barbell towards your chest, and lower them back down."
+    },
+    {
+        "name": "Good Morning",
+        "targets": ["lower back", "glutes", "hamstrings"],
+        "how_to": "Place a barbell on your shoulders, bend at the hips with a slight knee bend, keep your back straight, and return to the starting position."
+    },
+    {
+        "name": "Rack Pull",
+        "targets": ["entire back", "glutes", "hamstrings"],
+        "how_to": "Perform a deadlift with the barbell starting on safety pins in a power rack, just below knee height, and lift it as you would a deadlift."
+    },
+    {
+        "name": "Inverted Row",
+        "targets": ["latissimus dorsi", "rhomboids", "biceps"],
+        "how_to": "Lie under a bar set at waist height, grip the bar, pull your chest to the bar, and lower yourself back down."
+    }
+]

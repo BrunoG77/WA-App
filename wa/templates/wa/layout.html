@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>{% block title %}Workout App{% endblock %}</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="{% static 'wa/style.css' %}">
+
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="top">
+                <div class="logo">
+                    <i class='bx bx-dumbbell'></i>
+                    <span>Workout App</span>
+                </div>
+                <i class="bx bx-menu" id="btn"></i>
+            </div>
+            {% if user.is_authenticated %}
+                <div class="user">
+                    <img src="{%static 'wa/images/rony_coleman.jpg' %}" alt="img" class="user-img">
+                    <p class="bold" style="font-size:24px">{{request.user}}</p>
+                    
+                </div>
+                <ul>
+                    <li class="cur-work-sidebar">
+                        <a href="{% url "index" %}">
+                            <i class='bx bx-crosshair'></i>
+                            <span class="nav-item">Current Workout</span>
+                        </a>
+                        <span class="tooltip" id="cur-work">Current Workout</span>
+                    </li>
+                    <li class="meso-sidebar">
+                        <a href="#">
+                            <i class='bx bx-history'></i>
+                            <span class="nav-item">Mesocycles</span>
+                        </a>
+                        <span class="tooltip" id="meso">Mesocycles</span>
+                    </li>
+                    <li class="custom-ex-sidebar">
+                        <a href="#">
+                            <i class='bx bx-customize'></i>
+                            <span class="nav-item">Custom Exercises</span>
+                        </a>
+                        <span class="tooltip">Custom Exercises</span>
+                    </li>
+                    <li class="new-meso-sidebar">
+                        <a href="{% url "new_meso" %}">
+                            <i class='bx bx-plus-circle'></i>
+                            <span class="nav-item">New Mesocycle</span>
+                        </a>
+                        <span class="tooltip" id="new-meso">New Mesocycle</span>
+                    </li>
+                    <li class="theme-sidebar">
+                        <a href="#">
+                            <!-- <i class='bx bx-sun' ></i> -->
+                            <i class='bx bx-moon'></i>
+                            <span class="nav-item">Theme</span>
+                        </a>
+                        <span class="tooltip" id="theme">Theme</span>
+                    </li>
+                    <li class="logout-sidebar">
+                        <a href="{% url "logout" %}">
+                            <i class="bx bx-log-out"></i>
+                            <span class="nav-item">Logout</span>
+                        </a>
+                        <span class="tooltip" id="logout">Logout</span>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <!--
+            <div class="container">
+                To show all in one line perfectly
+    
+                <h1>Workout App</h1>
+                <h1>Right side</h1>
+            </div>
+            -->
+
+            <div class="body">
+                {% block body %}
+                {% endblock %}
+            </div>
+            
+        </div>
+
+    </body>
+</html>

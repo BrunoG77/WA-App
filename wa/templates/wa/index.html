@@ -1,0 +1,17 @@
+{% extends "wa/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div>
+    {% if mesocycle %}
+        <!-- Show the most recent mesocycle workout -->
+    {% else %}
+        <h1> No current workout defined </h1>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'wa/wa.js' %}"></script>
+{% endblock %}
