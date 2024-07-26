@@ -275,6 +275,7 @@ function add_muscle_group(button, modal_btn, modal) {
     var muscle_btn = document.createElement('button')
     muscle_btn.setAttribute('type', 'button')
     muscle_btn.setAttribute('class', 'choose-ex-btn')
+    muscle_btn.setAttribute('data-modal-target',"#exercise")
     muscle_btn.innerHTML = 'Choose an exercise';
 
 
