@@ -207,14 +207,7 @@ function modalFunc() {
     const overlay = document.getElementById('overlay')
 
     openModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = document.querySelector(button.dataset.modalTarget)
-
-            // Before opening modal, get which button User pressed
-            let modal_btn = button;
-
-            openModal(modal, modal_btn)
-        })
+        button.addEventListener('click', buttonModalClick);
     })
 
     overlay.addEventListener('click', () => {
@@ -234,6 +227,37 @@ function modalFunc() {
     })
     
 }
+
+
+function buttonModalClick(event) {
+    // button is what triggered the event
+    const button = event.currentTarget;
+
+    const modal = document.querySelector(button.dataset.modalTarget)
+
+    console.log(`MODAL-TARGET: ${modal.id}`)
+
+    // Before opening modal, get which button User pressed
+    let modal_btn = button;
+
+    // decide what function to use
+    // depending if its a muscle modal or to choose exercise
+    if (modal.id == "exercise") {
+
+        openModalExercise(modal, modal_btn)
+
+        // Remove event listener after clicking the button cuz it will be replaced
+        button.removeEventListener('click', buttonModalClick);
+        
+    } else {
+
+        openModalMuscle(modal, modal_btn)
+
+        button.removeEventListener('click', buttonModalClick);
+    }
+}
+
+
 // When user presses one of the muscle groups, Get the info, clone btn, Take new muscle btn out,
 // append which muscle he pressed, append new muscle group btn and then close modal
 function add_muscle_group(button, modal_btn, modal) {
@@ -299,8 +323,8 @@ function add_muscle_group(button, modal_btn, modal) {
 }
 
 
-function openModal(modal, modal_btn) {
-    console.log('OPEN MODAL');
+function openModalMuscle(modal, modal_btn) {
+    console.log('OPEN MODAL MUSCLE');
     console.log(modal);
     if (modal==null) return
 
@@ -323,11 +347,117 @@ function openModal(modal, modal_btn) {
 
 }
 
+
+async function openModalExercise(modal, modal_btn) {
+    console.log('OPEN MODAL EXERCISE');
+    console.log(modal);
+    if (modal==null) return
+
+    console.log('OPEN MODAL NOT NULL');
+
+    modal.classList.add('active')
+    overlay.classList.add('active')
+
+    // Get the muscle that was chosen in lower case to compare with json files
+    const muscle_exercise = modal_btn.parentNode.parentNode.firstChild.innerHTML.toLowerCase();
+    console.log(`Muscle that was chosen: ${muscle_exercise}`);
+
+    // Fetch json file for the muscle chosen
+    const json_url = modal.getAttribute("data-json-url");
+    console.log(`JSON URL: ${json_url}`)
+
+    const json_file = json_url + `${muscle_exercise}.json`;
+    console.log(`JSON URL FULL: ${json_file}`)
+
+    // Fetch is an asynchronous function
+    // replace the .then with await, to wait for response
+    try {
+        // Await the fetch and the JSON conversion
+        const response = await fetch(json_file);
+
+        // Check if response is okay (status in the range 200-299)
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const json_data = await response.json();
+        console.log('JSON Data:', json_data);
+
+        // Now use the `json_data` variable
+        // Add exercises and such to the modal individually
+        json_data.forEach(exercise => {
+            // Extract exercise details from each object in the array
+            const exercise_name = exercise.name;
+            // Join targets array into a string
+            const targets = exercise.targets.join(", ");
+            const how_to = exercise.how_to;
+
+            console.log(`Exercise: ${exercise_name}`);
+            console.log(`Targets: ${targets}`);
+            console.log(`How To: ${how_to}`);
+
+            // Add them to the modal
+            const exercise_element = document.createElement('div');
+            exercise_element.setAttribute("class", "choose-muscle-row")
+
+            exercise_element.innerHTML = `
+            <button class="choose-muscle-btn" data-muscle="Chest" type="button">
+                <i class='bx bx-circle'></i>${exercise_name}</button>
+
+            `;
+
+            // <p><strong>Targets:</strong> ${targets}</p>
+            // <p><strong>How to:</strong> ${how_to}</p>
+
+            // Append this element to the modal
+            const exercise_options = document.querySelector("#exercise-options")
+            exercise_options.appendChild(exercise_element);
+        })
+
+        const exercise_options = document.querySelector("#exercise-options")
+
+        // Give the last exercise no border bottom
+        const last_ex_div = exercise_options.lastChild
+        //const last_ex = last_ex_div.firstChild
+
+        console.log(`LAST EX DIV: ${last_ex_div}`)
+        //console.log(`LAST EX: ${last_ex}`)
+
+        last_ex_div.setAttribute("id", "btn-muscle-circle-last")
+
+        console.log(`LAST EX AFTER CHANGE: ${last_ex_div}`)
+
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error)
+    }
+
+}
+
+
 function closeModal(modal) {
     if (modal==null) return
 
     modal.classList.remove('active')
     overlay.classList.remove('active')
+
+    try{
+        if (document.querySelector("#choose-exercise-row")) {
+            // If there is data in the modal already, delete it
+            const exercise_options = document.querySelector("#exercise-options")
+
+            exercise_options.remove()
+
+            const exercise_options_new = document.createElement('div');
+
+            exercise_options_new.setAttribute("class", "muscle-options");
+            exercise_options_new.setAttribute("id", "exercise-options");
+
+            const exercise_body = document.querySelector("#exercise-body");
+
+            exercise_body.appendChild(exercise_options_new);
+        }
+
+    } catch {}
 }
 
 function delete_icon(meso_days) {

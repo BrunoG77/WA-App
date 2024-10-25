@@ -1,0 +1,72 @@
+[
+    {
+    "name": "Crunch",
+    "targets": ["rectus abdominis"],
+    "how_to": "Lie on your back with your knees bent and feet flat on the floor, place your hands behind your head, lift your upper body towards your knees, and lower it back down."
+    },
+    {
+    "name": "Hanging Leg Raise",
+    "targets": ["lower rectus abdominis", "hip flexors"],
+    "how_to": "Hang from a pull-up bar with your arms fully extended, lift your legs up towards your chest while keeping them straight, and lower them back down."
+    },
+    {
+    "name": "Plank",
+    "targets": ["core", "rectus abdominis", "transversus abdominis"],
+    "how_to": "Lie face down, lift your body onto your toes and forearms, keep your body in a straight line, and hold this position for a set time."
+    },
+    {
+    "name": "Bicycle Crunch",
+    "targets": ["rectus abdominis", "obliques"],
+    "how_to": "Lie on your back with your hands behind your head, lift your knees to a 90-degree angle, alternate touching your elbows to the opposite knees while extending the other leg."
+    },
+    {
+    "name": "Russian Twist",
+    "targets": ["obliques", "rectus abdominis"],
+    "how_to": "Sit on the floor with your knees bent, lean back slightly, hold a weight with both hands, twist your torso to the left and right."
+    },
+    {
+    "name": "Mountain Climbers",
+    "targets": ["core", "rectus abdominis", "hip flexors"],
+    "how_to": "Start in a plank position, bring one knee towards your chest, then switch legs quickly as if you are running in place."
+    },
+    {
+    "name": "Leg Raise",
+    "targets": ["lower rectus abdominis", "hip flexors"],
+    "how_to": "Lie on your back with your legs straight, lift your legs up towards the ceiling, and lower them back down without touching the floor."
+    },
+    {
+    "name": "Ab Wheel Rollout",
+    "targets": ["core", "rectus abdominis", "transversus abdominis"],
+    "how_to": "Kneel on the floor holding an ab wheel, roll the wheel forward while keeping your core tight, and roll it back to the starting position."
+    },
+    {
+    "name": "Cable Woodchopper",
+    "targets": ["obliques", "rectus abdominis"],
+    "how_to": "Attach a handle to a high pulley, stand with feet shoulder-width apart, pull the handle diagonally across your body from high to low, and switch sides."
+    },
+    {
+    "name": "Side Plank",
+    "targets": ["obliques", "core"],
+    "how_to": "Lie on one side, lift your body onto your forearm and the side of your foot, keep your body in a straight line, and hold this position for a set time."
+    },
+    {
+    "name": "Flutter Kicks",
+    "targets": ["lower rectus abdominis", "hip flexors"],
+    "how_to": "Lie on your back with your legs straight, lift your legs a few inches off the ground, alternate kicking your legs up and down."
+    },
+    {
+    "name": "Reverse Crunch",
+    "targets": ["lower rectus abdominis"],
+    "how_to": "Lie on your back with your knees bent, lift your hips off the ground towards your chest, and lower them back down."
+    },
+    {
+    "name": "Toe Touches",
+    "targets": ["rectus abdominis", "obliques"],
+    "how_to": "Lie on your back with your legs straight up in the air, reach your hands towards your toes, and lower them back down."
+    },
+    {
+    "name": "V-Up",
+    "targets": ["rectus abdominis"],
+    "how_to": "Lie on your back with your legs straight, lift your upper body and legs simultaneously to form a V shape, and lower them back down."
+    }
+]

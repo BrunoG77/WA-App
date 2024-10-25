@@ -69,6 +69,7 @@ def index(request):
 
 
 # New Mesocycle
+@login_required
 def new_meso(request):
     
     return render(request, 'wa/new_meso.html')

@@ -608,10 +608,12 @@ h1 {
     transform: translate(-50%, -50%) scale(0);
     z-index: 20;
     background-color: #373737;
-    width: 25%;
+    width: 30%;
     max-width: 80%;
     min-width: 40vh;
     transition: 200ms ease-in-out;
+    max-height: 70%;
+    overflow: scroll;
 }
 
 .modal.active {
@@ -650,7 +652,7 @@ h1 {
 .choose-muscle-row {
     width: 100%;
     border-bottom: #000000 1px solid;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .choose-muscle-btn {
@@ -714,7 +716,7 @@ h1 {
 }
 
 .muscle-options {
-    display: flex;
+
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
