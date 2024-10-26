@@ -399,11 +399,17 @@ async function openModalExercise(modal, modal_btn) {
             // Add them to the modal
             const exercise_element = document.createElement('div');
             exercise_element.setAttribute("class", "choose-muscle-row")
+            exercise_element.setAttribute("id", "choose-exercise-row")
 
             exercise_element.innerHTML = `
-            <button class="choose-muscle-btn" data-muscle="Chest" type="button">
-                <i class='bx bx-circle'></i>${exercise_name}</button>
-
+            <div class="exercise-name-row">
+                <button class="choose-muscle-btn" type="button">
+                    <i class='bx bx-circle'></i>${exercise_name}</button>
+            </div>
+            <div class="info-exercise-row">
+                <button class="exercise-info" type="button">
+                    <i class='bx bx-info-circle'></i></button>
+            </div>
             `;
 
             // <p><strong>Targets:</strong> ${targets}</p>

@@ -650,6 +650,9 @@ h1 {
 }
 
 .choose-muscle-row {
+    display: flex; /* Use flexbox to keep items in a row */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Push items to edges of the row */
     width: 100%;
     border-bottom: #000000 1px solid;
     margin-bottom: 1em;
@@ -675,6 +678,37 @@ h1 {
     margin-right: 0.5em;
     transition: background-color font-size 0.2s ease-in-out;
     border-radius: 1rem;
+}
+
+.exercise-name-row {
+    flex-grow: 1; /* Takes up remaining space */
+}
+
+.info-exercise-row {
+    flex-shrink: 0; /* Prevents it from shrinking */
+}
+
+.info-exercise-row .exercise-info {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.info-exercise-row .exercise-info i {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-left: 0.5em;
+    border-radius: 1rem;
+    text-align: right;
+    transition: color 0.1s ease-in-out;
+}
+
+.info-exercise-row .exercise-info i:hover {
+    font-size: 1.5rem;
+    color: #a73535;
+    margin-left: 0.5em;
+    border-radius: 1rem;
+    text-align: right;
 }
 
 #btn-muscle-circle-last {
