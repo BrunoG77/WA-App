@@ -351,6 +351,7 @@ function openModalMuscle(modal, modal_btn) {
 async function openModalExercise(modal, modal_btn) {
     console.log('OPEN MODAL EXERCISE');
     console.log(modal);
+    console.log(modal_btn)
     if (modal==null) return
 
     console.log('OPEN MODAL NOT NULL');
@@ -392,10 +393,6 @@ async function openModalExercise(modal, modal_btn) {
             const targets = exercise.targets.join(", ");
             const how_to = exercise.how_to;
 
-            console.log(`Exercise: ${exercise_name}`);
-            console.log(`Targets: ${targets}`);
-            console.log(`How To: ${how_to}`);
-
             // Add them to the modal
             const exercise_element = document.createElement('div');
             exercise_element.setAttribute("class", "choose-muscle-row")
@@ -403,7 +400,7 @@ async function openModalExercise(modal, modal_btn) {
 
             exercise_element.innerHTML = `
             <div class="exercise-name-row">
-                <button class="choose-muscle-btn" type="button">
+                <button class="choose-muscle-btn" id="exercise-name-btn" type="button">
                     <i class='bx bx-circle'></i>${exercise_name}</button>
             </div>
             <div class="info-exercise-row">
@@ -423,6 +420,20 @@ async function openModalExercise(modal, modal_btn) {
             const info_button = exercise_element.querySelector(".exercise-info");
             info_button.addEventListener("click", ()=>{
                 open_info_modal(exercise_name, targets, how_to);
+            });
+
+            // Add a listener to exercise name button to choose it
+            const exercise_button = exercise_element.querySelector("#exercise-name-btn")
+            exercise_button.addEventListener("click", ()=> {
+                // Put inner text of the exercise btn of the modal in the choose exercise btn
+                modal_btn.innerText = exercise_button.innerText;
+
+                // Change the style
+                modal_btn.style.backgroundColor = "#313131";
+                modal_btn.style.cursor = "default";
+
+                // close the modal
+                closeModal(modal)
             });
         })
 
