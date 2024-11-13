@@ -418,6 +418,12 @@ async function openModalExercise(modal, modal_btn) {
             // Append this element to the modal
             const exercise_options = document.querySelector("#exercise-options")
             exercise_options.appendChild(exercise_element);
+
+            // Add a listener to info button to open new info modal
+            const info_button = exercise_element.querySelector(".exercise-info");
+            info_button.addEventListener("click", ()=>{
+                open_info_modal(exercise_name, targets, how_to);
+            });
         })
 
         const exercise_options = document.querySelector("#exercise-options")
@@ -438,6 +444,38 @@ async function openModalExercise(modal, modal_btn) {
     }
 
 }
+
+
+function open_info_modal(exercise_name, targets, how_to) {
+
+    console.log('OPEN MODAL INFO');
+
+    const info_modal = document.querySelector("#info-modal")
+    const info_overlay = document.querySelector("#info-overlay")
+
+    // Set the content for the info modal
+    document.getElementById("info-modal-title").textContent = exercise_name;
+    document.getElementById("info-modal-targets").textContent = targets;
+    document.getElementById("info-modal-how-to").textContent = how_to;
+
+    // Show the modal and overlay
+    info_modal.style.display = "block";
+    info_overlay.style.display = "block";
+
+    // Event listener to close modal on clicking close button or overlay
+    document.querySelector(".close-info-modal").addEventListener("click", close_info_modal);
+    info_overlay.addEventListener("click", close_info_modal);
+}
+
+
+function close_info_modal() {
+    const info_modal = document.getElementById("info-modal");
+    const info_overlay = document.getElementById("info-overlay");
+
+    info_modal.style.display = "none";
+    info_overlay.style.display = "none";
+}
+
 
 
 function closeModal(modal) {
