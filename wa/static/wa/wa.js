@@ -48,6 +48,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // MODAL
     modalFunc()
+
+
+    // Create modal
+    const create_meso_btn = document.querySelector('.button-create-meso')
+    create_meso_btn.addEventListener('click', create_meso_modal)
 })
 
 // Check top of theme to know when to stop
@@ -537,4 +542,59 @@ function delete_icon_muscle(new_div) {
         new_div.remove()
     })
    
+}
+
+
+// Create Meso Modal
+function create_meso_modal() {
+    console.log("CREATE MESO MODAL")
+    const meso_modal = document.querySelector("#meso-create-modal")
+    const meso_modal_overlay = document.querySelector("#create-meso-overlay")
+
+    // Get value of input for meso title
+    const title = document.querySelector(".meso-title").value;
+
+    // Calculate the width of the title to add
+    const textLength = title.length;
+
+    // Put title in modal input
+    const input_title = document.querySelector(".meso-pre-title");
+
+    if (textLength < 17) {
+        input_title.style.width = "17ch"
+    } else {
+        input_title.style.width = `${textLength}ch`
+    }
+    
+    input_title.value = title;
+
+    meso_modal.style.display = 'block'
+    meso_modal_overlay.style.display = "block"
+
+    // Event listener on clicking week button
+    document.querySelectorAll(".week-btn").forEach(btn_clicked => {
+        btn_clicked.addEventListener("click", changeBtnClass)
+    })
+
+    // Event listener to close modal on clicking close button or overlay
+    document.querySelector(".close-create-meso-btn").addEventListener("click", close_create_meso_modal);
+    meso_modal_overlay.addEventListener("click", close_create_meso_modal);
+}
+
+function changeBtnClass(event) {
+    const btn_clicked = event.currentTarget;
+
+    // Take the active id of the other and add to the button clicked
+    const active_btn = document.querySelector("#week-chosen-btn");
+    active_btn.removeAttribute('id');
+
+    btn_clicked.setAttribute('id', 'week-chosen-btn');
+}
+
+function close_create_meso_modal() {
+    const meso_modal = document.querySelector("#meso-create-modal")
+    const meso_modal_overlay = document.querySelector("#create-meso-overlay")
+
+    meso_modal.style.display = 'none'
+    meso_modal_overlay.style.display = "none"
 }
