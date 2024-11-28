@@ -53,6 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create modal
     const create_meso_btn = document.querySelector('.button-create-meso')
     create_meso_btn.addEventListener('click', create_meso_modal)
+
+
+    // If user tries to create the mesocycle
+    const create_meso = document.querySelector(".create-meso-btn")
+    create_meso.addEventListener("click", sendMesoCycleData)
 })
 
 // Check top of theme to know when to stop
@@ -597,4 +602,107 @@ function close_create_meso_modal() {
 
     meso_modal.style.display = 'none'
     meso_modal_overlay.style.display = "none"
+}
+
+
+// Send Data to Django
+async function sendMesoCycleData() {
+    const mesoCycleData = gatherMesoCycleData();
+
+    console.log(`Trying to send: ${JSON.stringify(mesoCycleData)}`)
+    
+    try {
+        const response = await fetch('CreateMesocycle', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": getCookie("csrftoken") // Django requires CSRF token, Make function to retrieve it
+            },
+            body: JSON.stringify(mesoCycleData)
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Response error:', errorData);
+            throw new Error('Failed to send data');
+        }
+
+        const result = await response.json();
+        console.log('MesoCycle created:', result);
+
+        // Redirect user to index page on success
+        if (result.status === 'success') {
+            window.location.href = '/'; // Replace with your index page URL
+        }
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Retrieve user data chosen
+function gatherMesoCycleData() {
+    // Get the Cycle Title, Number of weeks and an empty array for all the days
+    const mesoCycleName = document.querySelector(".meso-pre-title").value;
+    console.log(`Title: ${mesoCycleName}`)
+    const numWeeks = document.querySelector('.week-btn#week-chosen-btn').textContent;
+    console.log(`Number of weeks: ${numWeeks}`)
+    const workoutDays = []; // Array to hold each day's workout
+    
+    // Loop through all the days
+    document.querySelectorAll('.meso-days').forEach(dayElement => {
+        // Get the day
+        const dayName = dayElement.querySelector('.select .selected').textContent;
+        console.log(`Day NAme: ${dayName}`)
+
+        // prepare arrays
+        const muscleExerciseGroups = [];
+
+        // Loop through muscle and exercise boxes
+        dayElement.querySelectorAll('.choose-exercise').forEach(chooseExerciseElement => {
+            // Get the muscle chosen
+            const muscleGroupName = chooseExerciseElement.querySelector('.muscle-chosen').textContent;
+            console.log(`MUSCLE Name: ${muscleGroupName}`)
+            
+            // Get the exercise chosen
+            const exerciseName = chooseExerciseElement.querySelector('.choose-ex .choose-ex-btn').textContent.trim();
+            console.log(`EXERCISE Name: ${exerciseName}`)
+
+            muscleExerciseGroups.push({
+                muscleGroup: muscleGroupName,
+                exercise: exerciseName
+            });
+        });
+
+        workoutDays.push({
+            day: dayName,
+            muscleGroups: muscleExerciseGroups
+        });
+    });
+
+    const mesoCycleData = {
+        title: mesoCycleName,
+        weeks: numWeeks,
+        days: workoutDays
+    };
+
+    console.log(`SEND DATA DJANGO: ${JSON.stringify(mesoCycleData)}`)
+
+    return mesoCycleData;
+}
+
+// Doesnt need to work for now
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+        const cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.startsWith(name + "=")) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
 }

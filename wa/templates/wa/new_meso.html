@@ -13,34 +13,32 @@
 </div>
 
 <!-- Modal to create the mesocycle -->
-<form class="create-meso-form" action="{% url 'new_meso' %}" method="post">
-    {% csrf_token %}
-    <!-- Create mesocycle Modal Structure -->
-    <div id="meso-create-modal">
-        <div class="meso-create-modal-content">
-            <h2 id="create-meso-modal-title">CREATE YOUR MESOCYCLE</h2>
+<!-- Create mesocycle Modal Structure -->
+<div id="meso-create-modal">
+    <div class="meso-create-modal-content">
+        <h2 id="create-meso-modal-title">CREATE YOUR MESOCYCLE</h2>
 
-            <span id="mesocycle-name-span">Mesocycle Name</span>
-            <input class="meso-pre-title" type="text" name="pre-title" autocomplete='off'>
+        <span id="mesocycle-name-span">Mesocycle Name</span>
+        <input class="meso-pre-title" type="text" name="pre-title" autocomplete='off'>
 
-            <span id="mesocycle-weeks-span">Choose the number of weeks for the mesocycle including the deload</span>
-            <div class="week-btns">
-                <button class="week-btn" id="week-chosen-btn" type="button">4</button>
-                <button class="week-btn" type="button">5</button>
-                <button class="week-btn" type="button">6</button>
-                <button class="week-btn" type="button">7</button>
-                <button class="week-btn" type="button">8</button>
-            </div>
+        <span id="mesocycle-weeks-span">Choose the number of weeks for the mesocycle including the deload</span>
+        <div class="week-btns">
+            <button class="week-btn" id="week-chosen-btn" type="button">4</button>
+            <button class="week-btn" type="button">5</button>
+            <button class="week-btn" type="button">6</button>
+            <button class="week-btn" type="button">7</button>
+            <button class="week-btn" type="button">8</button>
+        </div>
 
-            <div class="create-close-meso-btns">
-                <button class="close-create-meso-btn" type="button">CANCEL</button>
-                <button class="create-meso-btn" type="submit">CREATE</button>
-            </div>
+        <div class="create-close-meso-btns">
+            <button class="close-create-meso-btn" type="button">CANCEL</button>
+            <button class="create-meso-btn" type="button">CREATE</button>
         </div>
     </div>
+</div>
 
-    <!-- Overlay for mesocycle Modal -->
-    <div id="create-meso-overlay"></div>
+<!-- Overlay for mesocycle Modal -->
+<div id="create-meso-overlay"></div>
 
 <!-- Define exercises for each day -->
 <div class="wrap">
