@@ -67,7 +67,26 @@ def register(request):
 @login_required
 def index(request):
     
-    return render(request, "wa/index.html")
+    # Get User latest mesocycle data
+    latest_mesocycle = Mesocycle.objects.filter(user=request.user).order_by("-created_at").first()
+    
+    if latest_mesocycle:
+        print(f"\n\nTitle: {latest_mesocycle.title}, Weeks: {latest_mesocycle.weeks}")
+        for day in latest_mesocycle.days.all():
+            print(f"Day: {day.day_name}")
+            for muscle_exercise in day.muscle_exercises.all():
+                print(f"Muscle: {muscle_exercise.muscle}, Exercise: {muscle_exercise.exercise}")
+                
+        return render(request, "wa/index.html", {
+        "mesocycle": latest_mesocycle
+    })
+                
+    else:
+        print("No mesocycles found for this user.")
+    
+        return render(request, "wa/index.html", {
+            "mesocycle": "User doesn't have a mesocycle"
+        })
 
 
 # New Mesocycle
@@ -130,3 +149,13 @@ def create_meso(request):
         
     # If not Post method
     return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=405)
+
+
+@login_required
+def mesocycles(request):
+    
+    mesocycles = Mesocycle.objects.filter(user=request.user)
+    
+    return render(request, "wa/mesocycles.html", {
+        "mesocycles": mesocycles
+    })

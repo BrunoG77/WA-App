@@ -12,6 +12,9 @@ class Mesocycle(models.Model):
     title = models.CharField(max_length=255)
     weeks = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
+    
+    # Optionally:
+    #updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"{self.title} ({self.weeks} weeks) - {self.user.username}"

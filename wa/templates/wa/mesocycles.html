@@ -1,0 +1,27 @@
+{% extends "wa/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div>
+    {% if mesocycles %}
+        <!-- Show the most recent mesocycle workout -->
+        <div class="center">
+            <!-- <h3 class="CurrentWorkoutTitle">Current Workout</h3> -->
+            <h1 class="WaTitle">Mesocycles</h1>
+
+            {% for mesocycle in mesocycles %}
+                <div class="mesocycle-container">
+                    <div class="mesocycle-container-title">{{ mesocycle.title }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h1> No mesocycles defined </h1>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'wa/wa.js' %}"></script>
+{% endblock %}

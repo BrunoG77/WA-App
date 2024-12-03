@@ -5,6 +5,31 @@
 <div>
     {% if mesocycle %}
         <!-- Show the most recent mesocycle workout -->
+        <div class="center">
+            <!-- <h3 class="CurrentWorkoutTitle">Current Workout</h3> -->
+            <h1 class="WaTitle">{{ mesocycle.title }}</h1>
+
+            <div class="wrap">
+                {% for day in mesocycle.days.all %}
+                    <div class="meso-days">
+                        <div class="select" id="select-no-hover" style="cursor: default;">
+                            <span class="selected">{{ day.day_name }}</span>
+                        </div>
+                    
+                        {% for muscle_exercise in day.muscle_exercises.all %}
+                            <div class="choose-exercise">
+                                <div class="muscle-chosen">{{ muscle_exercise.muscle }}</div>
+
+                                <div class="choose-ex">
+                                    <button class="choose-ex-btn" style="background-color: rgb(49, 49, 49); cursor: default;">
+                                        {{ muscle_exercise.exercise }}</button>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     {% else %}
         <h1> No current workout defined </h1>
     {% endif %}

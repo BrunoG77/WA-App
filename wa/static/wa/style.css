@@ -993,3 +993,47 @@ h1 {
     background-color: rgba(20, 20, 20, 0.8); /* Semi-transparent background */
     z-index: 32;
 }
+
+
+/*Make index page all centered*/
+.center {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#select-no-hover:hover {
+    background-color: initial; /* Reset background color */
+    cursor: default; /* Default pointer */
+}
+
+.CurrentWorkoutTitle {
+    color: rgba(202, 4, 4, 0.925);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.WaTitle {
+    background-color: #10171e;
+    color: white;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
+    margin: 0.3rem;
+    font-size: 2.5rem;
+}
+
+/* Mesocycle container in mesocycles page*/
+.mesocycle-container {
+    margin: 1.7rem;
+    padding: 1rem;
+    background-color: #000000;
+    border-radius: 0.2rem;
+}
+
+.mesocycle-container-title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+}
