@@ -592,7 +592,6 @@ h1 {
 
 .wrap {
     display: flex;
-    
     white-space: nowrap;
 }
 
@@ -997,11 +996,16 @@ h1 {
 
 /*Make index page all centered*/
 .center {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     text-align: center;
-    align-items: center;
-    align-content: center;
+}
+
+#select-no-hover{
+    border: none;
     justify-content: center;
-    justify-items: center;
 }
 
 #select-no-hover:hover {
@@ -1016,24 +1020,51 @@ h1 {
 }
 
 .WaTitle {
-    background-color: #10171e;
+    border-bottom: 0.3rem solid rgba(192, 15, 15, 0.808);
     color: white;
-    padding: 0.7rem;
-    margin-bottom: 0.5rem;
-    margin: 0.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
     font-size: 2.5rem;
 }
 
 /* Mesocycle container in mesocycles page*/
 .mesocycle-container {
-    margin: 1.7rem;
+    display: flex;
+    margin: 1.5rem;
     padding: 1rem;
-    background-color: #000000;
     border-radius: 0.2rem;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #1a1a1a; /* Match your dark theme */
+    color: white; /* Optional for better visibility */
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add space between the titles */
 }
 
 .mesocycle-container-title {
     font-size: 1.5rem;
     color: white;
     font-weight: 700;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+.form-trash-btn {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between title and icon */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    width: 300px; /* Optional: uniform width */
+}
+
+.trash-btn {
+    background-color: inherit;
+    border: none;
+}
+
+.wrap#center-wrap-index {
+    justify-content: center; /* Center horizontally */
 }

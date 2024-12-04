@@ -118,7 +118,6 @@ def create_meso(request):
             for days in days_data:
                 # First start with the day
                 day = days["day"]
-                print("\nDAY: ", day)
                 day_table = Day.objects.create(mesocycle=mesocycle_table, day_name=day)
                 
                 # Now go to muscle groups and exercises of that day
@@ -126,7 +125,6 @@ def create_meso(request):
                     # Get muscle and exercise of each loop and add to table
                     muscle = muscles["muscleGroup"]
                     exercise = muscles["exercise"]
-                    print("\nMuscle: ", muscle, "\nExercise: ", exercise, "\n")
                     MuscleExercise.objects.create(day=day_table, muscle=muscle, exercise=exercise)
                     
                 
@@ -159,3 +157,24 @@ def mesocycles(request):
     return render(request, "wa/mesocycles.html", {
         "mesocycles": mesocycles
     })
+    
+    
+@login_required
+@csrf_exempt
+def mesocycles_delete(request, id):
+    mesocycles = Mesocycle.objects.filter(user=request.user)
+    
+    if request.method == 'POST':
+        # Fetch the mesocycle by ID and delete it
+        meso_to_del = Mesocycle.objects.get(id=id)
+        
+        meso_to_del.delete()
+    
+        return render(request, "wa/mesocycles.html", {
+            "mesocycles": mesocycles
+        })
+        
+    else:
+        return render(request, "wa/mesocycles.html", {
+            "mesocycles": mesocycles
+        })

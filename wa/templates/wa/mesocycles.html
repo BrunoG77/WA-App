@@ -11,7 +11,18 @@
 
             {% for mesocycle in mesocycles %}
                 <div class="mesocycle-container">
-                    <div class="mesocycle-container-title">{{ mesocycle.title }}</div>
+                    <form class="form-trash-btn" action="{% url 'meso_delete' mesocycle.id %}" method="post">
+                        {% csrf_token %}
+                        <div class="mesocycle-container-title">{{ mesocycle.title }}</div>
+                        
+                        <div class="delete-meso">
+                            <button class="trash-btn" type="submit">
+                                <a>
+                                    <i class='bx bx-trash'></i>
+                                </a>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             {% endfor %}
         </div>

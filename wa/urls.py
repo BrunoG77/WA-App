@@ -9,5 +9,6 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("NewMesocycle", views.new_meso, name="new_meso"),
     path("CreateMesocycle", views.create_meso, name="create_meso"),
-    path("Mesocycles", views.mesocycles, name="mesocycles")
+    path("Mesocycles", views.mesocycles, name="mesocycles"),
+    path("MesoDelete/<int:id>", views.mesocycles_delete, name="meso_delete")
 ]
