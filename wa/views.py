@@ -85,7 +85,7 @@ def index(request):
         print("No mesocycles found for this user.")
     
         return render(request, "wa/index.html", {
-            "mesocycle": "User doesn't have a mesocycle"
+            "mesocycle": "Please create a mesocycle"
         })
 
 
